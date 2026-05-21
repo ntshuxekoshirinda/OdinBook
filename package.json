@@ -1,0 +1,30 @@
+{
+  "name": "odinbook-social-media",
+  "version": "1.0.0",
+  "description": "Full-stack TypeScript social media site for Render deployment",
+  "main": "dist/backend/server.js",
+  "scripts": {
+    "init-frontend": "vite build",
+    "compile-backend": "tsc --project tsconfig.json",
+    "build": "npm run init-frontend && npm run compile-backend",
+    "start": "node dist/backend/server.js",
+    "dev": "concurrently \"vite\" \"ts-node-dev --respawn src/backend/server.js\""
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^8.2.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  }
+}
